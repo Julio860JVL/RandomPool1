@@ -2,7 +2,7 @@
 
 namespace RandomPool1
 {
-    public class RandomPool
+    public class RandomPool1
     {
         public static void StartGame()
         {
