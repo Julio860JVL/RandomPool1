@@ -22,8 +22,8 @@ namespace RandomPool1
         }
         public static void PoolTable()
         {
-            List<string> balls = new List<string>() { "1", "2", "3", "4", "5", "6", "7", "8", "9", "missed" };
-
+            List<string> balls = new List<string>() { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+            Array missed = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         }
     }
 }
