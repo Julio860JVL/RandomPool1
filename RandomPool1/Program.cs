@@ -6,7 +6,7 @@
         {
             while (true)
             {
-                RandomPool.StartGame();
+                RandomPool1.StartGame();
             }
         }
     }

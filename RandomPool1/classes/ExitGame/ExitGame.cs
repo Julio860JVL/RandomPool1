@@ -22,7 +22,7 @@ namespace RandomPool1
                                              // I got it from ChatGPT.
                         break;
                     case 2:
-                        RandomPool.StartGame();
+                        RandomPool1.StartGame();
                         break;
                 }
             }

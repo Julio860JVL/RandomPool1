@@ -10,14 +10,12 @@ namespace RandomPool1
             if (player01.goesFirst == true)
             {
                 Console.WriteLine($"{player01.name} is playing first.");
-                //Started(player01, player02);
-                
+                PoolTable();
             }
             else
             {
                 Console.WriteLine($"{player02.name} is playing first.");
-                //Started(player01, player02);
-                Console.ReadLine();
+                PoolTable();
             }
         }
         public static void PoolTable()
