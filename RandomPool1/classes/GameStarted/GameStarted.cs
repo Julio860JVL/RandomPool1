@@ -27,7 +27,8 @@ namespace RandomPool1
     {
         private static string firstToPlay;
         private static string secondToPlay;
-        private static Random random = new Random();
+        private static readonly Random FirstPlayerChanceToMiss = new Random();
+        private static readonly Random SecondPlayerChanceToMiss = new Random();
         public static void Started(PlayerClass player01, PlayerClass player02)
         {
             if (player01.goesFirst == true)
@@ -61,7 +62,7 @@ namespace RandomPool1
 
             void FirstPlayerTurn()
             {
-                int randomIndex1 = random.Next(0, missed.Length);
+                int randomIndex1 = FirstPlayerChanceToMiss.Next(0, missed.Length);
                 
                 if (randomIndex1 != 4) //<-- # 4 = missed the shot, so pass the turn.
                 {
@@ -109,7 +110,7 @@ namespace RandomPool1
 
             void SecondPlayerTurn()
             {
-                int randomIndex1 = random.Next(0, missed.Length);
+                int randomIndex1 = SecondPlayerChanceToMiss.Next(0, missed.Length);
                 
                 if (randomIndex1 != 4) //<-- # 4 = missed the shot, so pass the turn.
                 {
@@ -155,7 +156,7 @@ namespace RandomPool1
                 }
             }
             Console.WriteLine("The code has reached the end.");
-            Console.WriteLine("Press any key and it will go back to the beginning.");
+            Console.WriteLine("Press enter to return to the beginning.");
             Console.ReadLine();
             RandomPool1.StartGame();
         }
