@@ -7,11 +7,11 @@ namespace RandomPool1
     {
         public static void Player2(ListOfPlayerNames listOfPlayersInstance, PlayerClass player01)
         {
-            AccessPlayerList(listOfPlayersInstance, player01);
+            AccessPlayerList(listOfPlayersInstance);
 
-            void AccessPlayerList(ListOfPlayerNames playersToSelect, PlayerClass player1)
+            void AccessPlayerList(ListOfPlayerNames playersToSelect)
             {
-                List<string> playerNames = playersToSelect.playerNames;
+                List<string> playerNames = playersToSelect.PlayerNames;
                 Console.WriteLine("Choose player # 2:");
                 for (int i = 0; i < playerNames.Count; i++)
                 {
@@ -19,7 +19,6 @@ namespace RandomPool1
                 }
 
                 string userInput = Console.ReadLine();
-
                 if (byte.TryParse(userInput, out byte validatedInput))
                 {
                     switch (validatedInput)
@@ -29,34 +28,29 @@ namespace RandomPool1
                             break;
                     }
 
-                    if (validatedInput >= listOfPlayersInstance.playerNames.Count)
+                    if (validatedInput >= listOfPlayersInstance.PlayerNames.Count)
                     {
-                        Console.WriteLine("Error: \"001\" Select Player 2.");
+                        Console.WriteLine("Error: " + 003 + " Select Player 2.");
                         Invalid.SelectionWarning();
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Select the second player between 1 and 5 or select 0 to quit the game.");
-                        Console.ResetColor();
+                        ChangeColor.Red("Select the second player between 1 and 5 or select 0 to quit the game.\n");
                         Player2(listOfPlayersInstance, player01);
                     }
                     else
                     {
-                        string playerName = listOfPlayersInstance.playerNames[validatedInput];
-                        Console.WriteLine($"{playerName} has been choosen as player # 2.");
-                        Console.WriteLine("");//Just a spacing to make the app easier to read.
+                        string playerName = listOfPlayersInstance.PlayerNames[validatedInput];
+                        Console.WriteLine($"{playerName} has been choosen as player # 2.\n");
 
-                        PlayerClass player02 = new PlayerClass(listOfPlayersInstance.playerNames[validatedInput]);
-                        listOfPlayersInstance.playerNames.Remove(playerName);
+                        PlayerClass player02 = new PlayerClass(listOfPlayersInstance.PlayerNames[validatedInput]);
+                        listOfPlayersInstance.PlayerNames.Remove(playerName);
 
                         Choose.FirstToPlay(player01, player02);
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Error: \"002\" Select Player 2.");
+                    Console.WriteLine("Error: " + 004 + " Select Player 2.");
                     Invalid.SelectionWarning();
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Select the second player between 1 and 5 or select 0 to quit the game.");
-                    Console.ResetColor();
+                    ChangeColor.Red("Select the second player between 1 and 5 or select 0 to quit the game.");
                     Player2(listOfPlayersInstance, player01);
                 }
             }

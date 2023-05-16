@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\ChangeColor\ChangeColor.cs" />
     <Compile Include="classes\ExitGame\ExitGame.cs" />
     <Compile Include="classes\GameStarted\GameStarted.cs" />
     <Compile Include="classes\GameStarted\FirstToPlay.cs" />
