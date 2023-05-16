@@ -2,17 +2,12 @@
 {
     internal class PlayerClass
     {
-        public string name;
+        internal string name;
         public bool goesFirst;
 
-        public PlayerClass(string name)
+        public PlayerClass(string playerName)
         {
-            this.name = name;
-        }
-
-        public static void Play()
-        {
-            // code here to hit the ball.
+            this.name = playerName;
         }
     }
 }

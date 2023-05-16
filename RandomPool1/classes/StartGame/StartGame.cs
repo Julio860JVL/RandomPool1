@@ -8,9 +8,7 @@ namespace RandomPool1
         {
             Console.WriteLine("Do you want to start a Random Pool game? \n(1) Yes | (2) No");
 
-            byte userInput;
-            byte.TryParse(Console.ReadLine(), out userInput);
-
+            byte.TryParse(Console.ReadLine(), out byte userInput);
             if (userInput == 1 || userInput == 2)
             {
                 switch (userInput)
@@ -23,7 +21,8 @@ namespace RandomPool1
                         break;
                 }
             }
-            else if (userInput != 1 || userInput != 2)
+            //else if (userInput != 1 || userInput != 2)
+            else
             {
                 Invalid.SelectionWarning();
                 StartGame();
