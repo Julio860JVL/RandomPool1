@@ -21,7 +21,6 @@ namespace RandomPool1
                         break;
                 }
             }
-            //else if (userInput != 1 || userInput != 2)
             else
             {
                 Invalid.SelectionWarning();
