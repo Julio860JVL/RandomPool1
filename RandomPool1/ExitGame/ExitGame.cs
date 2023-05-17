@@ -9,9 +9,7 @@ namespace RandomPool1
             Console.WriteLine("Your selection was to stop the game.");
             Console.WriteLine("Are you sure you want to quit the game? \n(1) Yes | (2) No");
 
-            byte exitGame;
-            byte.TryParse(Console.ReadLine(), out exitGame);
-
+            byte.TryParse(Console.ReadLine(), out byte exitGame);
             if (exitGame == 1 || exitGame == 2)
             {
                 switch (exitGame)
@@ -26,12 +24,11 @@ namespace RandomPool1
                         break;
                 }
             }
-            else if (exitGame != 1 || exitGame != 2)
+            else
             {
                 Invalid.SelectionWarning();
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Please select 1 to quit the game or 2 to continue playing.");
-                Console.ResetColor();
+                ChangeColor.Red("Please select 1 to quit the game or 2 to continue playing.\n");
+
                 ExitTheGame();
             }
         }
