@@ -7,7 +7,7 @@ namespace RandomPool1
         public static void FirstToPlay(PlayerClass player01, PlayerClass player02)
         {
             Console.WriteLine("Choose which player goes first.");
-            Console.WriteLine("(0) Exit Game\n(1) " + player01.name + " VS (2) " + player02.name + "\n");
+            Console.WriteLine("(0) Exit Game\n(1) " + player01.name + " VS (2) " + player02.name);
             // The player selection took me 6 hours.
             // Then passing the name to this file took me another 3 hours because I did not knew how to do it.
 
@@ -51,7 +51,7 @@ namespace RandomPool1
             if (player01.goesFirst == true)
             {
                 ChangeColor.Green(player01.name);
-                Console.WriteLine(" is playing first.");
+                Console.WriteLine(" is playing first.\n");
                 firstToPlay = player01.name;
                 secondToPlay = player02.name;
                 Game.PoolTable();
@@ -59,7 +59,7 @@ namespace RandomPool1
             else
             {
                 ChangeColor.Green(player02.name);
-                Console.WriteLine(" is playing first.");
+                Console.WriteLine(" is playing first.\n");
                 firstToPlay = player02.name;
                 secondToPlay = player01.name;
                 Game.PoolTable();

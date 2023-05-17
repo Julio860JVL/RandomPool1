@@ -13,7 +13,9 @@ namespace RandomPool1
         {
             List<string> balls = new List<string>() { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
             Array missed = new byte[] { 1, 2, 3, 4, 5 }; //<-- # 4 = missed the shot.
-            Console.WriteLine($"There is a total of {balls.Count} balls on the table.");
+            Console.Write($"There is a total of ");
+            ChangeColor.Green($"{balls.Count} balls");
+            Console.WriteLine(" on the table.");
             foreach (string i in balls)
             {
                 Console.Write(i + ", ");

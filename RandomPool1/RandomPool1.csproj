@@ -43,16 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classes\ChangeColor\ChangeColor.cs" />
-    <Compile Include="classes\ExitGame\ExitGame.cs" />
-    <Compile Include="classes\GameStarted\GameStarted.cs" />
-    <Compile Include="classes\GameStarted\FirstToPlay.cs" />
-    <Compile Include="classes\InvalidSelectionWarning\InvalidSelectionWarning.cs" />
-    <Compile Include="classes\Players\Players.cs" />
-    <Compile Include="classes\SelectPlayers\ListOfPlayerNames.cs" />
-    <Compile Include="classes\SelectPlayers\SelectPlayer1.cs" />
-    <Compile Include="classes\SelectPlayers\SelectPlayer2.cs" />
-    <Compile Include="classes\StartGame\StartGame.cs" />
+    <Compile Include="ColorsAndWarning\ChangeColor\ChangeColor.cs" />
+    <Compile Include="ExitGame\ExitGame.cs" />
+    <Compile Include="GameStarted\GameStarted.cs" />
+    <Compile Include="GameStarted\FirstToPlay.cs" />
+    <Compile Include="ColorsAndWarning\InvalidSelectionWarning\InvalidSelectionWarning.cs" />
+    <Compile Include="Players\PlayerClass\PlayerClass.cs" />
+    <Compile Include="Players\SelectPlayers\ListOfPlayerNames.cs" />
+    <Compile Include="Players\SelectPlayers\SelectPlayer1.cs" />
+    <Compile Include="Players\SelectPlayers\SelectPlayer2.cs" />
+    <Compile Include="StartGame\StartGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
