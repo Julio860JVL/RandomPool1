@@ -24,7 +24,7 @@ namespace RandomPool1
                 Console.Write(i + ", ");
             }
             Console.WriteLine();
-            Console.WriteLine("Press enter to continue...");
+            Console.WriteLine("Press enter to continue.....");
             Console.ReadLine();
             FirstPlayerTurn();
 
