@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="ColorsAndWarning\ChangeColor\ChangeColor.cs" />
     <Compile Include="ExitGame\ExitGame.cs" />
-    <Compile Include="StartGame\GameStarted.cs" />
+    <Compile Include="StartGame\PoolTable.cs" />
     <Compile Include="StartGame\FirstToPlay.cs" />
     <Compile Include="ColorsAndWarning\InvalidSelectionWarning\InvalidSelectionWarning.cs" />
     <Compile Include="Players\PlayerClass\PlayerClass.cs" />
