@@ -6,7 +6,7 @@ namespace RandomPool1
     {
         public static void Intro()
         {
-            Console.WriteLine("Do you want to start a Random Pool game? \n(1) Yes | (2) No");
+            Console.WriteLine("Do you want to begin a Random Pool game? \n(1) Yes | (2) No");
 
             byte.TryParse(Console.ReadLine(), out byte userInput);
             if (userInput == 1 || userInput == 2)
