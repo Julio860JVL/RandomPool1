@@ -42,7 +42,7 @@ namespace RandomPool1
                         Console.WriteLine(" has been choosen as player # 2.\n");
 
                         PlayerClass player02 = new PlayerClass(listOfPlayersInstance.PlayerNames[validatedInput]);
-                        listOfPlayersInstance.PlayerNames.Remove(playerName);
+                        //listOfPlayersInstance.PlayerNames.Remove(playerName);
 
                         Choose.FirstToPlay(player01, player02);
                     }
