@@ -12,7 +12,10 @@ namespace RandomPool1
         public static void PoolTable()
         {
             List<string> balls = new List<string>() { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-            Array missed = new byte[] { 1, 2, 3, 4, 5 }; //<-- # 4 = missed the shot.
+            Array missed = new byte[] { 1, 2, 3, 4, 5 }; //<-- 1 chance out of 5 to missed the shot and pass the turn.
+                                                         // Professional players barely miss in real life but I will
+                                                         // leave it like that to give the game a little bit of more
+                                                         // variations while seeing the game running.
             Console.Write($"There is a total of ");
             ChangeColor.Green($"{balls.Count} balls");
             Console.WriteLine(" on the table.");
