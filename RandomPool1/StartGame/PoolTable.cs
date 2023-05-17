@@ -80,9 +80,9 @@ namespace RandomPool1
 
             void SecondPlayerTurn()
             {
-                int randomIndex1 = SecondPlayerChanceToMiss.Next(0, missed.Length);
+                int randomIndex2 = SecondPlayerChanceToMiss.Next(0, missed.Length);
                 
-                if (randomIndex1 != 4) //<-- # 4 = missed the shot, so pass the turn.
+                if (randomIndex2 != 4) //<-- # 4 = missed the shot, so pass the turn.
                 {
                     string ballPocketed = balls[0];
                     balls.RemoveAt(0);
