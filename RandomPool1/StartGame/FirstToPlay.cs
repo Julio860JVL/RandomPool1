@@ -23,12 +23,12 @@ namespace RandomPool1
                         break;
                     case "1":
                         player01.goesFirst = true;
-                        Choose.Started(player01, player02);
+                        Choose.FirstPlayerSelected(player01, player02);
                         break;
                     case "2":
                         //player02.GoesFirst(true); <-- this is not needed because the next
                         // class does not evaluates if 'player02.GoesFirst(true)'.
-                        Choose.Started(player01, player02);
+                        Choose.FirstPlayerSelected(player01, player02);
                         break;
                 }
             }
@@ -45,7 +45,7 @@ namespace RandomPool1
 
         public static string firstToPlay;
         public static string secondToPlay;
-        public static void Started(PlayerClass player01, PlayerClass player02)
+        public static void FirstPlayerSelected(PlayerClass player01, PlayerClass player02)
         {
             if (player01.goesFirst == true)
             {
