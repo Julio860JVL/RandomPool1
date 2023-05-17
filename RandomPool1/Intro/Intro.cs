@@ -4,7 +4,7 @@ namespace RandomPool1
 {
     public class RandomPool1
     {
-        public static void StartGame()
+        public static void Intro()
         {
             Console.WriteLine("Do you want to start a Random Pool game? \n(1) Yes | (2) No");
 
@@ -24,7 +24,7 @@ namespace RandomPool1
             else
             {
                 Invalid.SelectionWarning();
-                StartGame();
+                Intro();
             }
         }
     }

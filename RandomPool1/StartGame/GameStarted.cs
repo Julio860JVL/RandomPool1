@@ -134,7 +134,7 @@ namespace RandomPool1
             Console.WriteLine("Press enter to return to the beginning.");
             Console.ReadLine();
 
-            RandomPool1.StartGame();
+            RandomPool1.Intro();
         }
     }
 }

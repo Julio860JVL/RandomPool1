@@ -51,7 +51,7 @@ namespace RandomPool1
                 {
                     Console.WriteLine("Error: \"004\" Select Player 2.");
                     Invalid.SelectionWarning();
-                    ChangeColor.Red("Select the second player between 1 and 5 or select 0 to quit the game.");
+                    ChangeColor.Red("Select the second player between 1 and 5 or select 0 to quit the game.\n");
                     Player2(listOfPlayersInstance, player01);
                 }
             }

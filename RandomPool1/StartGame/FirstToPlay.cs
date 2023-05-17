@@ -34,7 +34,6 @@ namespace RandomPool1
             }
             else
             {
-                Console.WriteLine("Invalid input");
                 Console.WriteLine("Error: \"005\".");
                 Invalid.SelectionWarning();
                 Console.ForegroundColor = ConsoleColor.Red;
