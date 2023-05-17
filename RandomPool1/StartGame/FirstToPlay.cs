@@ -26,8 +26,8 @@ namespace RandomPool1
                         Choose.FirstPlayerSelected(player01, player02);
                         break;
                     case "2":
-                        //player02.GoesFirst(true); <-- this is not needed because the next
-                        // class does not evaluates if 'player02.GoesFirst(true)'.
+                        //player02.goesFirst == true; <-- this is not needed because the
+                        // 'FirstPlayerSelected' method does not evaluates if 'player02.goesFirst == true'.
                         Choose.FirstPlayerSelected(player01, player02);
                         break;
                 }
@@ -36,9 +36,7 @@ namespace RandomPool1
             {
                 Console.WriteLine("Error: \"005\".");
                 Invalid.SelectionWarning();
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Select which player goes first between 1 and 2 or select 0 to quit the game.");
-                Console.ResetColor();
+                ChangeColor.Red("Select which player goes first between 1 and 2 or select 0 to quit the game.\n");
                 FirstToPlay(player01, player02);
             }
         }

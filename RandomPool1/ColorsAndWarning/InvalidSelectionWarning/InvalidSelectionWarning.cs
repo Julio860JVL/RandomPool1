@@ -6,9 +6,7 @@ namespace RandomPool1
     {
         public static void SelectionWarning()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Invalid selection.");
-            Console.ResetColor();
+            ChangeColor.Red("Invalid selection.\n");
         }
     }
 }
