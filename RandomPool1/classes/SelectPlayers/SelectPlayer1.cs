@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Policy;
 
 namespace RandomPool1
 {
@@ -32,7 +33,7 @@ namespace RandomPool1
 
                 if (validatedInput >= listOfPlayersInstance.PlayerNames.Count)
                 {
-                    Console.WriteLine("Error: " + 001 + " Select Player 1.");
+                    Console.WriteLine("Error: \"001\" Select Player 1.");
                     Invalid.SelectionWarning();
                     ChangeColor.Red("Select the first player between 1 and 6 or select 0 to quit the game.\n");
                     Player1();
@@ -40,7 +41,8 @@ namespace RandomPool1
                 else
                 {
                     string playerName = listOfPlayersInstance.PlayerNames[validatedInput];
-                    Console.WriteLine($"{playerName} has been choosen as player # 1.\n");
+                    ChangeColor.Green(playerName);
+                    Console.WriteLine(" has been choosen as player # 1.\n");
                     
                     PlayerClass player01 = new PlayerClass(listOfPlayersInstance.PlayerNames[validatedInput]);
                     listOfPlayersInstance.PlayerNames.Remove(playerName);
@@ -50,7 +52,7 @@ namespace RandomPool1
             }
             else
             {
-                Console.WriteLine("Error: " + 002 + " Select Player 1.");
+                Console.WriteLine("Error: \"002\" Select Player 1.");
                 Invalid.SelectionWarning();
                 ChangeColor.Red("Select the first player between 1 and 6 or select 0 to quit the game.\n");
                 Player1();

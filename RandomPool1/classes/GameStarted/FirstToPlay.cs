@@ -7,9 +7,9 @@ namespace RandomPool1
         public static void FirstToPlay(PlayerClass player01, PlayerClass player02)
         {
             Console.WriteLine("Choose which player goes first.");
-            Console.WriteLine("(0) Exit Game\n(1) " + player01.name + " VS (2) " + player02.name);
+            Console.WriteLine("(0) Exit Game\n(1) " + player01.name + " VS (2) " + player02.name + "\n");
             // The player selection took me 6 hours.
-            // Then passing the name to this file took me another 3 hours.
+            // Then passing the name to this file took me another 3 hours because I did not knew how to do it.
 
             string userInput = Console.ReadLine();
 
@@ -23,25 +23,46 @@ namespace RandomPool1
                         break;
                     case "1":
                         player01.goesFirst = true;
-                        Console.WriteLine("");//Just a spacing to make the app easier to read.
-                        Game.Started(player01, player02);
+                        Choose.Started(player01, player02);
                         break;
                     case "2":
                         //player02.GoesFirst(true); <-- this is not needed because the next
                         // class does not evaluates if 'player02.GoesFirst(true)'.
-                        Game.Started(player01, player02);
+                        Choose.Started(player01, player02);
                         break;
                 }
             }
             else
             {
                 Console.WriteLine("Invalid input");
-                Console.WriteLine("Error: \"001\".");
+                Console.WriteLine("Error: \"005\".");
                 Invalid.SelectionWarning();
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Select which player goes first between 1 and 2 or select 0 to quit the game.");
                 Console.ResetColor();
                 FirstToPlay(player01, player02);
+            }
+        }
+
+        public static string firstToPlay;
+        public static string secondToPlay;
+        public static void Started(PlayerClass player01, PlayerClass player02)
+        {
+            if (player01.goesFirst == true)
+            {
+                ChangeColor.Green(player01.name);
+                Console.WriteLine(" is playing first.");
+                firstToPlay = player01.name;
+                secondToPlay = player02.name;
+                Game.PoolTable();
+            }
+            else
+            {
+                ChangeColor.Green(player02.name);
+                Console.WriteLine(" is playing first.");
+                firstToPlay = player02.name;
+                secondToPlay = player01.name;
+                Game.PoolTable();
             }
         }
     }

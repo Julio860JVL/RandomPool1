@@ -30,7 +30,7 @@ namespace RandomPool1
 
                     if (validatedInput >= listOfPlayersInstance.PlayerNames.Count)
                     {
-                        Console.WriteLine("Error: " + 003 + " Select Player 2.");
+                        Console.WriteLine("Error: \"003\" Select Player 2.");
                         Invalid.SelectionWarning();
                         ChangeColor.Red("Select the second player between 1 and 5 or select 0 to quit the game.\n");
                         Player2(listOfPlayersInstance, player01);
@@ -38,7 +38,8 @@ namespace RandomPool1
                     else
                     {
                         string playerName = listOfPlayersInstance.PlayerNames[validatedInput];
-                        Console.WriteLine($"{playerName} has been choosen as player # 2.\n");
+                        ChangeColor.Green(playerName);
+                        Console.WriteLine(" has been choosen as player # 2.\n");
 
                         PlayerClass player02 = new PlayerClass(listOfPlayersInstance.PlayerNames[validatedInput]);
                         listOfPlayersInstance.PlayerNames.Remove(playerName);
@@ -48,7 +49,7 @@ namespace RandomPool1
                 }
                 else
                 {
-                    Console.WriteLine("Error: " + 004 + " Select Player 2.");
+                    Console.WriteLine("Error: \"004\" Select Player 2.");
                     Invalid.SelectionWarning();
                     ChangeColor.Red("Select the second player between 1 and 5 or select 0 to quit the game.");
                     Player2(listOfPlayersInstance, player01);
